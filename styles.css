@@ -132,6 +132,11 @@ ul {
   color: var(--accent-primary);
 }
 
+.name-highlight {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
 /* ===== NAVIGATION ===== */
 .navbar {
   position: fixed;
@@ -1046,6 +1051,79 @@ ul {
 .cert-content p {
   font-size: var(--fs-sm);
   color: var(--text-tertiary);
+}
+
+/* Language Certificates (Highlight) */
+.language-cert {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.language-cert:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: var(--accent-primary);
+}
+
+.language-cert .cert-content h3,
+.language-cert .cert-content p {
+  color: var(--bg-primary);
+}
+
+.language-icon {
+  background: var(--accent-gradient);
+  color: var(--text-primary);
+}
+
+.cert-date {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  margin-top: var(--spacing-xs);
+  font-style: italic;
+}
+
+/* ===== SOFT SKILLS SECTION ===== */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.soft-skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.soft-skill-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.1);
+}
+
+.soft-skill-card .skill-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 217, 255, 0.1);
+  border-radius: var(--radius-xl);
+  color: var(--accent-primary);
+}
+
+.soft-skill-card h3 {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 /* ===== CONTACT SECTION ===== */

@@ -74,6 +74,13 @@ const certificateItems = document.querySelectorAll('.certificate-item');
 
 certificateItems.forEach(item => {
     item.addEventListener('click', () => {
+        const isAvailable = item.getAttribute('data-available') !== 'false';
+        
+        if (!isAvailable) {
+            alert('Certificado ainda não está disponível');
+            return;
+        }
+
         const certPath = item.getAttribute('data-cert');
         certificateFrame.src = certPath;
         modal.classList.add('active');
